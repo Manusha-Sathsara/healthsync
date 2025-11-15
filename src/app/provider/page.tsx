@@ -117,12 +117,12 @@ const PatientModal = ({
   if (!isOpen || !patient) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
-        className="bg-card border border-border rounded-xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+        className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto shadow-2xl"
       >
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-bold">Patient Details</h2>
@@ -214,6 +214,7 @@ export default function ProviderDashboard() {
   const [selectedPatient, setSelectedPatient] = useState<Patient | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [filterRisk, setFilterRisk] = useState<string>("all");
+  const [activeTab, setActiveTab] = useState("dashboard");
 
   const filteredPatients = mockPatients.filter((patient) => {
     const matchesSearch = patient.name
@@ -232,7 +233,7 @@ export default function ProviderDashboard() {
   return (
     <div className="min-h-screen bg-background">
       <div className="flex h-screen">
-        <Sidebar />
+        <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
         <div className="flex-1 overflow-auto">
           <div className="p-6 space-y-6">

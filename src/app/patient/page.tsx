@@ -43,7 +43,7 @@ import {
   Bar,
 } from "recharts";
 
-const Sidebar = () => (
+const Sidebar = ({ activeTab, setActiveTab }: { activeTab: string; setActiveTab: (tab: string) => void }) => (
   <div className="w-64 glass-card h-full p-6 space-y-6">
     <div className="flex items-center space-x-3">
       <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center">
@@ -57,17 +57,18 @@ const Sidebar = () => (
 
     <nav className="space-y-2">
       {[
-        { icon: Activity, label: "Dashboard", active: true },
-        { icon: Heart, label: "Vitals" },
-        { icon: Pill, label: "Medications" },
-        { icon: Calendar, label: "Appointments" },
-        { icon: Brain, label: "AI Coach" },
-        { icon: Settings, label: "Settings" },
+        { icon: Activity, label: "Dashboard", id: "dashboard" },
+        { icon: Heart, label: "Vitals", id: "vitals" },
+        { icon: Pill, label: "Medications", id: "medications" },
+        { icon: Calendar, label: "Appointments", id: "appointments" },
+        { icon: Brain, label: "AI Coach", id: "ai-coach" },
+        { icon: Settings, label: "Settings", id: "settings" },
       ].map((item) => (
         <button
           key={item.label}
+          onClick={() => setActiveTab(item.id)}
           className={`w-full flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-            item.active
+            activeTab === item.id
               ? "bg-primary-500/20 text-primary-500"
               : "hover:bg-white/10 text-muted-foreground hover:text-foreground"
           }`}
@@ -77,6 +78,21 @@ const Sidebar = () => (
         </button>
       ))}
     </nav>
+    
+    {/* Logout Button */}
+    <div className="border-t border-white/10 pt-4">
+      <Button 
+        variant="ghost" 
+        size="sm" 
+        className="w-full justify-start text-red-500 hover:text-red-400 hover:bg-red-500/10"
+        onClick={() => window.location.href = '/login'}
+      >
+        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        </svg>
+        Logout
+      </Button>
+    </div>
   </div>
 );
 
@@ -104,13 +120,14 @@ const TopBar = () => (
 
 export default function PatientDashboard() {
   const [timeRange, setTimeRange] = useState("7d");
+  const [activeTab, setActiveTab] = useState("dashboard");
   const glucoseData = generateGlucoseData(7);
   const bpData = generateBloodPressureData(7);
 
   return (
     <div className="min-h-screen bg-background">
       <div className="flex h-screen">
-        <Sidebar />
+        <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
         <div className="flex-1 overflow-auto">
           <div className="p-6 space-y-6">

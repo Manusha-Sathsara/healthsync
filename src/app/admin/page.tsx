@@ -87,6 +87,19 @@ export default function AdminDashboard() {
                 </button>
               ))}
             </nav>
+            
+            {/* Logout Button */}
+            <div className="border-t border-white/10 pt-4 mt-6">
+              <button
+                onClick={() => window.location.href = '/login'}
+                className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 text-red-500 hover:text-red-400 hover:bg-red-500/10"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                <span className="font-medium">Logout</span>
+              </button>
+            </div>
           </div>
         </div>
 
