@@ -50,8 +50,8 @@ const Sidebar = ({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
         <User className="w-5 h-5 text-white" />
       </div>
       <div>
-        <h3 className="font-semibold">Sarah Johnson</h3>
-        <p className="text-sm text-muted-foreground">Patient ID: #12345</p>
+        <h3 className="font-semibold">Sithumini Sasanka</h3>
+        <p className="text-sm text-muted-foreground">Patient ID: PID0210</p>
       </div>
     </div>
 
@@ -101,7 +101,7 @@ const TopBar = () => (
     <div>
       <h1 className="text-2xl font-bold">Health Dashboard</h1>
       <p className="text-muted-foreground">
-        Welcome back, Sarah! Here&apos;s your health overview.
+        Welcome back, Sithumini! Here&apos;s your health overview.
       </p>
     </div>
     <div className="flex items-center space-x-4">

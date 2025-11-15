@@ -157,15 +157,15 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>support@healthsync.com</span>
+                <span>healthsync@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+94 715321218</span>
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>Sabaragamuwa Uviversity of Sri Lanka </span>
               </div>
             </div>
           </div>
