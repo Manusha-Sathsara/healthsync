@@ -53,28 +53,28 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: "Dr. Sarah Chen",
+      name: "Dr. Manusha Sathsara",
       role: "CEO & Co-Founder",
-      background: "Former Chief Medical Officer at Johns Hopkins",
-      image: "/api/placeholder/150/150",
+      background: "Former Chief Medical Officer at Asiri Hospital",
+      image: ".\public\Images\team\Manusha1.jpg",
     },
     {
-      name: "Michael Rodriguez",
+      name: "Piyara Wathsiluni",
       role: "CTO & Co-Founder",
       background: "Ex-Google AI Research, Stanford PhD",
-      image: "/api/placeholder/150/150",
+      image: ".\public\Images\team\Wathsiluni.jpg",
     },
     {
-      name: "Dr. James Wilson",
+      name: "Dr. Dinithi Ayesha",
       role: "Chief Medical Officer",
-      background: "Cardiologist, 20+ years clinical experience",
-      image: "/api/placeholder/150/150",
+      background: "Gynecologist, 5+ years clinical experience",
+      image: ".\public\Images\team\Dinithi.jpg",
     },
     {
-      name: "Lisa Anderson",
+      name: "Praneepa Tharushini",
       role: "VP of Product",
-      background: "Former Product Lead at Apple Health",
-      image: "/api/placeholder/150/150",
+      background: "Former Product Lead at Kandy Pharmacy",
+      image: ".\public\Images\team\Praneepa.jpg",
     },
   ];
 
