@@ -56,25 +56,25 @@ export default function AboutPage() {
       name: "Dr. Manusha Sathsara",
       role: "CEO & Co-Founder",
       background: "Former Chief Medical Officer at Asiri Hospital",
-      image: ".\public\Images\team\Manusha1.jpg",
+      image: ".\public\Images\Manusha1.jpg",
     },
     {
       name: "Piyara Wathsiluni",
       role: "CTO & Co-Founder",
       background: "Ex-Google AI Research, Stanford PhD",
-      image: ".\public\Images\team\Wathsiluni.jpg",
+      image: ".\public\Images\Wathsiluni.jpg",
     },
     {
       name: "Dr. Dinithi Ayesha",
       role: "Chief Medical Officer",
       background: "Gynecologist, 5+ years clinical experience",
-      image: ".\public\Images\team\Dinithi.jpg",
+      image: ".\public\Images\Dinithi.jpg",
     },
     {
       name: "Praneepa Tharushini",
       role: "VP of Product",
       background: "Former Product Lead at Kandy Pharmacy",
-      image: ".\public\Images\team\Praneepa.jpg",
+      image: ".\public\Images\Praneepa.jpg",
     },
   ];
 
