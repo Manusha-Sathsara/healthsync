@@ -87,15 +87,25 @@ export default function AdminDashboard() {
                 </button>
               ))}
             </nav>
-            
+
             {/* Logout Button */}
             <div className="border-t border-white/10 pt-4 mt-6">
               <button
-                onClick={() => window.location.href = '/login'}
+                onClick={() => (window.location.href = "/login")}
                 className="w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 text-red-500 hover:text-red-400 hover:bg-red-500/10"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                  />
                 </svg>
                 <span className="font-medium">Logout</span>
               </button>
@@ -417,7 +427,301 @@ export default function AdminDashboard() {
               </motion.div>
             )}
 
-            {/* Other tabs can be implemented similarly */}
+            {activeTab === "insurance" && (
+              <motion.div variants={itemVariants}>
+                <GlassCard>
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-xl font-semibold text-foreground">
+                      Insurance Management
+                    </h3>
+                    <Button size="sm">
+                      <Plus className="w-4 h-4 mr-2" />
+                      Add Insurance Provider
+                    </Button>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                      <CreditCard className="w-8 h-8 text-blue-500 mx-auto mb-2" />
+                      <h4 className="font-semibold text-foreground">
+                        Total Claims
+                      </h4>
+                      <p className="text-2xl font-bold text-blue-600">2,847</p>
+                      <p className="text-sm text-muted-foreground">
+                        This month
+                      </p>
+                    </div>
+                    <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                      <TrendingUp className="w-8 h-8 text-green-500 mx-auto mb-2" />
+                      <h4 className="font-semibold text-foreground">
+                        Approved
+                      </h4>
+                      <p className="text-2xl font-bold text-green-600">2,456</p>
+                      <p className="text-sm text-muted-foreground">
+                        86.3% approval rate
+                      </p>
+                    </div>
+                    <div className="text-center p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+                      <AlertTriangle className="w-8 h-8 text-orange-500 mx-auto mb-2" />
+                      <h4 className="font-semibold text-foreground">Pending</h4>
+                      <p className="text-2xl font-bold text-orange-600">391</p>
+                      <p className="text-sm text-muted-foreground">
+                        Awaiting review
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    {[
+                      {
+                        company: "Blue Cross",
+                        claims: 847,
+                        status: "Active",
+                        contact: "john.doe@bluecross.com",
+                      },
+                      {
+                        company: "Aetna Health",
+                        claims: 623,
+                        status: "Active",
+                        contact: "support@aetna.com",
+                      },
+                      {
+                        company: "United Healthcare",
+                        claims: 756,
+                        status: "Active",
+                        contact: "admin@uhc.com",
+                      },
+                      {
+                        company: "Cigna",
+                        claims: 421,
+                        status: "Pending",
+                        contact: "contact@cigna.com",
+                      },
+                    ].map((provider, index) => (
+                      <div
+                        key={index}
+                        className="border border-border/50 rounded-lg p-4 hover:bg-white/5 transition-colors"
+                      >
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center space-x-4">
+                            <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                              <Shield className="w-6 h-6 text-white" />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-foreground">
+                                {provider.company}
+                              </h4>
+                              <p className="text-sm text-muted-foreground">
+                                {provider.contact}
+                              </p>
+                              <p className="text-xs text-muted-foreground">
+                                {provider.claims} claims processed
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex items-center space-x-3">
+                            <span
+                              className={`px-3 py-1 text-xs rounded-full ${
+                                provider.status === "Active"
+                                  ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
+                                  : "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"
+                              }`}
+                            >
+                              {provider.status}
+                            </span>
+                            <Button variant="outline" size="sm">
+                              Manage
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </GlassCard>
+              </motion.div>
+            )}
+
+            {activeTab === "reports" && (
+              <motion.div variants={itemVariants}>
+                <GlassCard>
+                  <div className="flex items-center justify-between mb-6">
+                    <h3 className="text-xl font-semibold text-foreground">
+                      System Reports
+                    </h3>
+                    <div className="flex items-center space-x-2">
+                      <Button variant="outline" size="sm">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        Date Range
+                      </Button>
+                      <Button size="sm">
+                        <Download className="w-4 h-4 mr-2" />
+                        Export All
+                      </Button>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {[
+                      {
+                        title: "User Activity Report",
+                        description:
+                          "Monthly user engagement and activity metrics",
+                        lastGenerated: "2 hours ago",
+                      },
+                      {
+                        title: "Financial Summary",
+                        description:
+                          "Revenue, costs, and financial performance",
+                        lastGenerated: "1 day ago",
+                      },
+                      {
+                        title: "System Performance",
+                        description:
+                          "Server uptime, response times, and errors",
+                        lastGenerated: "6 hours ago",
+                      },
+                      {
+                        title: "Security Audit",
+                        description:
+                          "Login attempts, security events, and compliance",
+                        lastGenerated: "1 week ago",
+                      },
+                      {
+                        title: "Provider Analytics",
+                        description:
+                          "Provider performance and patient outcomes",
+                        lastGenerated: "3 days ago",
+                      },
+                      {
+                        title: "Insurance Claims",
+                        description:
+                          "Claims processing and approval statistics",
+                        lastGenerated: "5 hours ago",
+                      },
+                    ].map((report, index) => (
+                      <div
+                        key={index}
+                        className="border border-border/50 rounded-lg p-4 hover:bg-white/5 transition-colors"
+                      >
+                        <div className="flex items-center justify-between mb-3">
+                          <h4 className="font-semibold text-foreground">
+                            {report.title}
+                          </h4>
+                          <FileText className="w-5 h-5 text-primary-500" />
+                        </div>
+                        <p className="text-sm text-muted-foreground mb-3">
+                          {report.description}
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs text-muted-foreground">
+                            Last generated: {report.lastGenerated}
+                          </span>
+                          <div className="flex space-x-2">
+                            <Button variant="outline" size="sm">
+                              View
+                            </Button>
+                            <Button size="sm">Generate</Button>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </GlassCard>
+              </motion.div>
+            )}
+
+            {activeTab === "settings" && (
+              <motion.div variants={itemVariants}>
+                <GlassCard>
+                  <h3 className="text-xl font-semibold text-foreground mb-6">
+                    System Settings
+                  </h3>
+
+                  <div className="space-y-6">
+                    <div className="border-b border-border pb-4">
+                      <h4 className="font-semibold text-foreground mb-2">
+                        General Settings
+                      </h4>
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-foreground">
+                            Platform Name
+                          </span>
+                          <input
+                            type="text"
+                            value="HealthSync"
+                            className="px-3 py-1 bg-input border border-border rounded text-sm"
+                          />
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-foreground">
+                            Maintenance Mode
+                          </span>
+                          <button className="w-12 h-6 bg-gray-300 rounded-full relative">
+                            <div className="w-5 h-5 bg-white rounded-full absolute left-0.5 top-0.5 transition-transform"></div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-b border-border pb-4">
+                      <h4 className="font-semibold text-foreground mb-2">
+                        Security Settings
+                      </h4>
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-foreground">
+                            Two-Factor Authentication
+                          </span>
+                          <button className="w-12 h-6 bg-primary-500 rounded-full relative">
+                            <div className="w-5 h-5 bg-white rounded-full absolute right-0.5 top-0.5 transition-transform"></div>
+                          </button>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-foreground">
+                            Session Timeout (minutes)
+                          </span>
+                          <input
+                            type="number"
+                            value="30"
+                            className="px-3 py-1 bg-input border border-border rounded text-sm w-20"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-foreground mb-2">
+                        Notification Settings
+                      </h4>
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-foreground">
+                            Email Notifications
+                          </span>
+                          <button className="w-12 h-6 bg-primary-500 rounded-full relative">
+                            <div className="w-5 h-5 bg-white rounded-full absolute right-0.5 top-0.5 transition-transform"></div>
+                          </button>
+                        </div>
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-foreground">
+                            SMS Alerts
+                          </span>
+                          <button className="w-12 h-6 bg-gray-300 rounded-full relative">
+                            <div className="w-5 h-5 bg-white rounded-full absolute left-0.5 top-0.5 transition-transform"></div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 pt-4 border-t border-border">
+                    <Button>Save Settings</Button>
+                  </div>
+                </GlassCard>
+              </motion.div>
+            )}
+
             {activeTab === "system" && (
               <motion.div variants={itemVariants}>
                 <GlassCard>

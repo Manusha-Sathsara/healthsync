@@ -43,7 +43,13 @@ import {
   Bar,
 } from "recharts";
 
-const Sidebar = ({ activeTab, setActiveTab }: { activeTab: string; setActiveTab: (tab: string) => void }) => (
+const Sidebar = ({
+  activeTab,
+  setActiveTab,
+}: {
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}) => (
   <div className="w-64 glass-card h-full p-6 space-y-6">
     <div className="flex items-center space-x-3">
       <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center">
@@ -78,17 +84,27 @@ const Sidebar = ({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
         </button>
       ))}
     </nav>
-    
+
     {/* Logout Button */}
     <div className="border-t border-white/10 pt-4">
-      <Button 
-        variant="ghost" 
-        size="sm" 
+      <Button
+        variant="ghost"
+        size="sm"
         className="w-full justify-start text-red-500 hover:text-red-400 hover:bg-red-500/10"
-        onClick={() => window.location.href = '/login'}
+        onClick={() => (window.location.href = "/login")}
       >
-        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        <svg
+          className="w-4 h-4 mr-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+          />
         </svg>
         Logout
       </Button>
