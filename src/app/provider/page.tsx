@@ -401,22 +401,22 @@ export default function ProviderDashboard() {
                 <div className="space-y-4">
                   {[
                     {
-                      patient: "Robert Wilson",
+                      patient: "Sadani Gayasha",
                       alert: "Irregular heart rhythm detected",
                       severity: "high",
-                      time: "5 min ago",
+                      time: "10 min ago",
                     },
                     {
-                      patient: "Sarah Johnson",
+                      patient: "Kaveesha Wickramasinghe",
                       alert: "Blood glucose spike",
                       severity: "medium",
-                      time: "12 min ago",
+                      time: "15 min ago",
                     },
                     {
-                      patient: "Michael Chen",
+                      patient: "Deshan Silva",
                       alert: "Missed medication reminder",
                       severity: "low",
-                      time: "1 hour ago",
+                      time: "2 hour ago",
                     },
                   ].map((alert, index) => (
                     <div
