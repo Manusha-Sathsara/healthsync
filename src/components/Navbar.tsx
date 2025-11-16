@@ -4,7 +4,15 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, User, Stethoscope, Shield, Settings } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  User,
+  Stethoscope,
+  Shield,
+  Settings,
+} from "lucide-react";
 import Button from "./Button";
 import ThemeToggle from "./ThemeToggle";
 
@@ -16,10 +24,30 @@ const navLinks = [
 ];
 
 const demoPortals = [
-  { href: "/patient", label: "Patient Portal", icon: User, description: "Manage your health data" },
-  { href: "/provider", label: "Provider Portal", icon: Stethoscope, description: "Healthcare professional dashboard" },
-  { href: "/insurance", label: "Insurance Portal", icon: Shield, description: "Claims and policy management" },
-  { href: "/admin", label: "Admin Portal", icon: Settings, description: "System administration" },
+  {
+    href: "/patient",
+    label: "Patient Portal",
+    icon: User,
+    description: "Manage your health data",
+  },
+  {
+    href: "/provider",
+    label: "Provider Portal",
+    icon: Stethoscope,
+    description: "Healthcare professional dashboard",
+  },
+  {
+    href: "/insurance",
+    label: "Insurance Portal",
+    icon: Shield,
+    description: "Claims and policy management",
+  },
+  {
+    href: "/admin",
+    label: "Admin Portal",
+    icon: Settings,
+    description: "System administration",
+  },
 ];
 
 export default function Navbar() {
@@ -30,13 +58,16 @@ export default function Navbar() {
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsDropdownOpen(false);
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
@@ -66,7 +97,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            
+
             {/* Demo Portals Dropdown */}
             <div className="relative" ref={dropdownRef}>
               <button
@@ -74,9 +105,13 @@ export default function Navbar() {
                 className="flex items-center space-x-1 text-foreground hover:text-primary-500 transition-colors duration-200 font-medium"
               >
                 <span>Demo Portals</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    isDropdownOpen ? "rotate-180" : ""
+                  }`}
+                />
               </button>
-              
+
               <AnimatePresence>
                 {isDropdownOpen && (
                   <motion.div
@@ -164,10 +199,12 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              
+
               {/* Mobile Demo Portals */}
               <div className="pt-4 border-t border-white/10">
-                <div className="text-sm font-semibold text-muted-foreground mb-2">Demo Portals</div>
+                <div className="text-sm font-semibold text-muted-foreground mb-2">
+                  Demo Portals
+                </div>
                 {demoPortals.map((portal) => (
                   <Link
                     key={portal.href}
@@ -177,13 +214,17 @@ export default function Navbar() {
                   >
                     <portal.icon className="w-4 h-4 text-primary-500" />
                     <div>
-                      <div className="text-sm font-medium text-foreground">{portal.label}</div>
-                      <div className="text-xs text-muted-foreground">{portal.description}</div>
+                      <div className="text-sm font-medium text-foreground">
+                        {portal.label}
+                      </div>
+                      <div className="text-xs text-muted-foreground">
+                        {portal.description}
+                      </div>
                     </div>
                   </Link>
                 ))}
               </div>
-              
+
               <div className="flex flex-col space-y-2 pt-4 border-t border-white/10">
                 <Button variant="ghost" size="sm" className="justify-start">
                   <Link href="/login">Login</Link>
