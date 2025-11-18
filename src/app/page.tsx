@@ -70,7 +70,7 @@ export default function HomePage() {
                   className="text-4xl md:text-6xl font-bold leading-tight"
                 >
                   Transform Healthcare with{" "}
-                  <span className="gradient-text">AI Intelligence</span>
+                  <span className="gradient-text">Artificial Intelligence</span>
                 </motion.h1>
 
                 <motion.p
