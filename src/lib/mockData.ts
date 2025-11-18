@@ -206,7 +206,12 @@ export const mockActivity: ActivitySummary[] = [
 // Mock insurance metrics
 export const mockInsuranceMetrics: InsuranceMetric[] = [
   { label: "Total Members", value: "125,847", change: 2.4, trend: "up" },
-  { label: "Claims This Month", value: "LKR 2.4M", change: -1.2, trend: "down" },
+  {
+    label: "Claims This Month",
+    value: "LKR 2.4M",
+    change: -1.2,
+    trend: "down",
+  },
   { label: "Risk Score Average", value: "3.2", change: 0.1, trend: "up" },
   { label: "Prevention Rate", value: "84%", change: 3.8, trend: "up" },
   { label: "Cost Per Member", value: "$342", change: -2.1, trend: "down" },
