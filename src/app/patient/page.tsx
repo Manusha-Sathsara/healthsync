@@ -56,7 +56,7 @@ const Sidebar = ({
         <User className="w-5 h-5 text-white" />
       </div>
       <div>
-        <h3 className="font-semibold">Sarah Johnson</h3>
+        <h3 className="font-semibold">Sadani Rajapaksha</h3>
         <p className="text-sm text-muted-foreground">Patient ID: #12345</p>
       </div>
     </div>
