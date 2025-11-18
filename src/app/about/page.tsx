@@ -53,28 +53,28 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: "Dr. Sarah Chen",
+      name: "Dr. Manusha Sathsara",
       role: "CEO & Co-Founder",
-      background: "Former Chief Medical Officer at Johns Hopkins",
-      image: "/api/placeholder/150/150",
+      background: "Former Chief Medical Officer at Asiri Hospital",
+      image: "/Images/Manusha.png",
     },
     {
-      name: "Michael Rodriguez",
+      name: "Piyara Wathsiluni",
       role: "CTO & Co-Founder",
       background: "Ex-Google AI Research, Stanford PhD",
-      image: "/api/placeholder/150/150",
+      image: "/Images/Wathsiluni.jpg",
     },
     {
-      name: "Dr. James Wilson",
+      name: "Dr. Dinithi Ayesha",
       role: "Chief Medical Officer",
-      background: "Cardiologist, 20+ years clinical experience",
-      image: "/api/placeholder/150/150",
+      background: "Cardiologist, 5+ years clinical experience",
+      image: "/Images/Dinithi.jpg",
     },
     {
-      name: "Lisa Anderson",
+      name: "Praneepa Tharushini",
       role: "VP of Product",
-      background: "Former Product Lead at Apple Health",
-      image: "/api/placeholder/150/150",
+      background: "Former Product Lead at Kandy Pharmacy",
+      image: "/Images/Praneepa.jpg",
     },
   ];
 
@@ -256,12 +256,24 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
               >
                 <GlassCard hover className="p-6 text-center">
-                  <div className="w-24 h-24 bg-linear-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
-                    {member.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </div>
+                  {member.image ? (
+                    <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-24 h-24 bg-linear-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                      {member.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </div>
+                  )}
                   <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
                   <p className="text-primary-500 font-medium mb-2">
                     {member.role}

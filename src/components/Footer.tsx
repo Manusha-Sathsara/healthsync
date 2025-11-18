@@ -157,15 +157,15 @@ export default function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>support@healthsync.com</span>
+                <span>healthsync@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+123 456 7890</span>
               </div>
               <div className="flex items-center space-x-2 text-muted-foreground">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>Sabaragamuwa University of Sri Lanka, Belihuloya</span>
               </div>
             </div>
           </div>
@@ -173,11 +173,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500" />
-              <span>for better healthcare</span>
-            </div>
+            
 
             <div className="flex items-center space-x-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary-500 transition-colors">
@@ -192,7 +188,7 @@ export default function Footer() {
             </div>
 
             <p className="text-sm text-muted-foreground">
-              © 2024 HealthSync. All rights reserved.
+              © 2025 HealthSync. All rights reserved.
             </p>
           </div>
         </div>
