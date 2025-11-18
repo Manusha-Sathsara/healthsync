@@ -54,7 +54,7 @@ export interface ChatMessage {
 export const mockPatients: Patient[] = [
   {
     id: "1",
-    name: " Sadani Gayasha",
+    name: " Sadani Rajapaksha",
     age: 55,
     riskScore: "high",
     lastVisit: "2025-11-15",
@@ -62,7 +62,7 @@ export const mockPatients: Patient[] = [
   },
   {
     id: "2",
-    name: "Kaveesha Wickramasinghe",
+    name: "Kaveesh Wickramasinghe",
     age: 48,
     riskScore: "medium",
     lastVisit: "2025-11-15",
@@ -206,7 +206,7 @@ export const mockActivity: ActivitySummary[] = [
 // Mock insurance metrics
 export const mockInsuranceMetrics: InsuranceMetric[] = [
   { label: "Total Members", value: "125,847", change: 2.4, trend: "up" },
-  { label: "Claims This Month", value: "$2.4M", change: -1.2, trend: "down" },
+  { label: "Claims This Month", value: "LKR 2.4M", change: -1.2, trend: "down" },
   { label: "Risk Score Average", value: "3.2", change: 0.1, trend: "up" },
   { label: "Prevention Rate", value: "84%", change: 3.8, trend: "up" },
   { label: "Cost Per Member", value: "$342", change: -2.1, trend: "down" },
@@ -241,8 +241,8 @@ export const mockChatMessages: ChatMessage[] = [
 export const mockTestimonials = [
   {
     id: "1",
-    name: "Dr. Sarah Mitchell",
-    role: "Cardiologist, City Medical Center",
+    name: "Dr. Sudarshi Navaratne",
+    role: "Cardiologist, Kandy teaching Hospital",
     content:
       "HealthSync has revolutionized how I monitor my patients. The real-time alerts have helped prevent several cardiac events.",
     rating: 5,
@@ -250,7 +250,7 @@ export const mockTestimonials = [
   },
   {
     id: "2",
-    name: "Maria Rodriguez",
+    name: "Piyumi Senanayake",
     role: "Patient",
     content:
       "Managing my diabetes has never been easier. The AI coach provides personalized insights that actually work.",
@@ -259,8 +259,8 @@ export const mockTestimonials = [
   },
   {
     id: "3",
-    name: "David Park",
-    role: "Insurance Director, HealthFirst",
+    name: "Kalum Priyanga",
+    role: "Insurance Director, AIA Insurance",
     content:
       "The predictive analytics have reduced our claim costs by 23% while improving patient outcomes.",
     rating: 5,
@@ -441,7 +441,7 @@ export const mockSystemHealth = [
 
 export const mockRecentActivities = [
   {
-    description: "New provider Dr. Sarah Wilson registered",
+    description: "New provider Dr. Ruwangi Wijerathne registered",
     timestamp: "2 minutes ago",
   },
   {
@@ -461,43 +461,43 @@ export const mockRecentActivities = [
     timestamp: "4 hours ago",
   },
   {
-    description: "New patient John Smith registered",
+    description: "New patient Saman Bandara registered",
     timestamp: "6 hours ago",
   },
 ];
 
 export const mockUserManagement = [
   {
-    name: "John Smith",
-    email: "john.smith@email.com",
+    name: "Saman Bandara",
+    email: "Samanbandara123@email.com",
     role: "Patient",
     status: "Active",
     lastLogin: "2 hours ago",
   },
   {
-    name: "Dr. Sarah Wilson",
-    email: "sarah.wilson@hospital.com",
+    name: "Dr. Ruwangi Wijerathne",
+    email: "RuwangiWijerathne@hospital.com",
     role: "Provider",
     status: "Active",
     lastLogin: "30 minutes ago",
   },
   {
-    name: "Michael Johnson",
-    email: "michael.j@insurance.com",
+    name: "Kalum Priyanga",
+    email: "Kalum.p@insurance.com",
     role: "Insurance",
     status: "Active",
     lastLogin: "1 day ago",
   },
   {
-    name: "Emily Davis",
-    email: "emily.davis@email.com",
+    name: "Santhi Perera ",
+    email: "santhiperera12@email.com",
     role: "Patient",
     status: "Inactive",
     lastLogin: "1 week ago",
   },
   {
-    name: "Dr. Robert Brown",
-    email: "robert.brown@clinic.com",
+    name: "Dr. Sunil Batagoda",
+    email: "Sunilbatagoda@clinic.com",
     role: "Provider",
     status: "Pending",
     lastLogin: "Never",
@@ -506,27 +506,27 @@ export const mockUserManagement = [
 
 export const mockProviderApplications = [
   {
-    name: "Dr. Jennifer Lee",
+    name: "Dr. Gayani Pathmathilake",
     specialty: "Cardiology",
-    location: "New York Medical Center",
+    location: "Colombo general hospital",
     status: "Pending",
   },
   {
-    name: "Dr. Michael Chen",
+    name: "Dr. Anoma Thilakaratne",
     specialty: "Dermatology",
-    location: "San Francisco Clinic",
+    location: "Asiri hospital, Kandy",
     status: "Approved",
   },
   {
-    name: "Dr. Amanda Rodriguez",
+    name: "Dr. Amanda Ranasinghe",
     specialty: "Pediatrics",
-    location: "Children's Hospital",
+    location: "Apeksha hospital, Maharagama",
     status: "Pending",
   },
   {
-    name: "Dr. David Thompson",
+    name: "Dr. Thushantha Jayawardena",
     specialty: "Orthopedics",
-    location: "Sports Medicine Center",
+    location: "Sports Medicine Center, Malabe",
     status: "Rejected",
   },
 ];
