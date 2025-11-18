@@ -41,7 +41,7 @@ const Sidebar = ({
         <Stethoscope className="w-5 h-5 text-white" />
       </div>
       <div>
-        <h3 className="font-semibold">Dr. Sarah Mitchell</h3>
+        <h3 className="font-semibold">Dr. Dinithi Ayesha</h3>
         <p className="text-sm text-muted-foreground">Cardiologist</p>
       </div>
     </div>
