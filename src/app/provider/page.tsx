@@ -314,7 +314,7 @@ export default function ProviderDashboard() {
                   <select
                     value={filterRisk}
                     onChange={(e) => setFilterRisk(e.target.value)}
-                    className="px-3 py-2 bg-input border border-border rounded-lg text-sm"
+                    className="px-3 py-2 bg-white dark:bg-gray-800 border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary-500"
                   >
                     <option value="all">All Risk Levels</option>
                     <option value="low">Low Risk</option>
