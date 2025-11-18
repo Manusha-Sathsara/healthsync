@@ -68,24 +68,24 @@ export default function PricingPage() {
 
   const testimonials = [
     {
-      name: "Dr. Sarah Mitchell",
-      role: "Cardiologist, City Medical Center",
+      name: "Dr. Sudarshi Navaratne",
+      role: "Cardiologist, Kandy teaching Hospital",
       content:
         "HealthSync has transformed how I monitor my patients. The predictive analytics have helped prevent several cardiac events.",
       rating: 5,
     },
     {
-      name: "John Davis",
-      role: "IT Director, Regional Hospital",
+      name: "Piyumi Senanayake",
+      role: "Patient",
       content:
-        "The integration was seamless and the ROI was immediate. Patient outcomes improved by 23% in the first quarter.",
+        "Managing my diabetes has never been easier. The AI coach provides personalized insights that actually work.",
       rating: 5,
     },
     {
-      name: "Maria Rodriguez",
-      role: "Diabetes Patient",
+      name: "Kalum Priyanga",
+      role: "Insurance Director, AIA Insurance",
       content:
-        "Managing my condition has never been easier. The AI recommendations are spot-on and have improved my quality of life significantly.",
+        "The predictive analytics have reduced our claim costs by 23% while improving patient outcomes.",
       rating: 5,
     },
   ];
@@ -162,7 +162,7 @@ export default function PricingPage() {
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <span className="bg-linear-to-r from-primary-500 to-accent-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-gradient-to-r from-primary-500 to-accent-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                     Most Popular
                   </span>
                 </div>
@@ -257,7 +257,7 @@ export default function PricingPage() {
                     &quot;{testimonial.content}&quot;
                   </p>
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-linear-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center text-white font-bold">
                       {testimonial.name
                         .split(" ")
                         .map((n) => n[0])
@@ -312,7 +312,7 @@ export default function PricingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-linear-to-r from-primary-500/10 to-accent-500/10 py-20">
+      <section className="bg-gradient-to-r from-primary-500/10 to-accent-500/10 py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
