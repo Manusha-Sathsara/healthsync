@@ -9,7 +9,7 @@ export default function PricingPage() {
   const plans = [
     {
       name: "Individual",
-      price: "$29",
+      price: "LKR 8,500",
       period: "/month",
       description: "Perfect for personal health monitoring",
       features: [
@@ -26,7 +26,7 @@ export default function PricingPage() {
     },
     {
       name: "Provider",
-      price: "$199",
+      price: "LKR 58,000",
       period: "/month",
       description: "For healthcare providers and clinics",
       features: [
