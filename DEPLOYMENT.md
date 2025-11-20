@@ -6,7 +6,7 @@
    ```bash
    git add .
    git commit -m "Add GitHub Pages deployment configuration"
-   git push origin main
+   git push origin master
    ```
 
 2. **Enable GitHub Pages in your repository**:
@@ -14,7 +14,7 @@
    - Click on **Settings** tab
    - Scroll down to **Pages** section in the left sidebar
    - Under **Source**, select **GitHub Actions**
-   - The workflow will automatically run when you push to the main branch
+   - The workflow will automatically run when you push to the master branch
 
 3. **Access your deployed site**:
    - Your site will be available at: `https://manusha-sathsara.github.io/healthsync/`
@@ -44,7 +44,7 @@
 
 1. **If deployment fails**:
    - Check the Actions tab in your GitHub repository for error logs
-   - Ensure your main branch is named `main` (not `master`)
+   - Ensure your main branch is named `master`
 
 2. **If images don't load**:
    - Make sure all images are in the `public` folder
