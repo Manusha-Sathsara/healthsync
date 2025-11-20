@@ -385,34 +385,42 @@ export const getRandomAvatar = () => {
 };
 
 // Admin Dashboard Mock Data
-export const mockAdminStats = [
+interface AdminStat {
+  title: string;
+  value: string;
+  change: number;
+  icon: string;
+  color: "primary" | "accent" | "success" | "warning" | "danger";
+}
+
+export const mockAdminStats: AdminStat[] = [
   {
     title: "Total Users",
     value: "12,543",
     change: 12.5,
     icon: "Users",
-    color: "primary",
+    color: "primary" as const,
   },
   {
     title: "Active Providers",
     value: "1,247",
     change: 8.2,
     icon: "UserCheck",
-    color: "success",
+    color: "success" as const,
   },
   {
     title: "System Uptime",
     value: "99.9%",
     change: 0.1,
     icon: "Server",
-    color: "accent",
+    color: "accent" as const,
   },
   {
     title: "Monthly Revenue",
     value: "$2.4M",
     change: 15.3,
     icon: "TrendingUp",
-    color: "warning",
+    color: "warning" as const,
   },
 ];
 
