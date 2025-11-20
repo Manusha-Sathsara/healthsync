@@ -3,10 +3,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
-  output: 'export',
+  output: "export",
   trailingSlash: true,
-  basePath: '/healthsync',
-  assetPrefix: '/healthsync/',
+  basePath: "/healthsync",
+  assetPrefix: "/healthsync/",
   images: {
     unoptimized: true,
   },

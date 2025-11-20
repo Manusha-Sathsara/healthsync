@@ -3,6 +3,7 @@
 ## Setup Instructions
 
 1. **Push your code to GitHub**:
+
    ```bash
    git add .
    git commit -m "Add GitHub Pages deployment configuration"
@@ -10,6 +11,7 @@
    ```
 
 2. **Enable GitHub Pages in your repository**:
+
    - Go to your repository: https://github.com/Manusha-Sathsara/healthsync
    - Click on **Settings** tab
    - Scroll down to **Pages** section in the left sidebar
@@ -23,6 +25,7 @@
 ## What was configured:
 
 ### Next.js Configuration (`next.config.ts`):
+
 - `output: 'export'` - Enables static export
 - `trailingSlash: true` - Adds trailing slashes to URLs
 - `basePath: '/healthsync'` - Sets the base path for GitHub Pages
@@ -30,11 +33,13 @@
 - `images: { unoptimized: true }` - Disables image optimization for static export
 
 ### GitHub Actions Workflow (`.github/workflows/deploy.yml`):
+
 - Builds the Next.js app
 - Exports static files to the `out` directory
 - Deploys to GitHub Pages
 
 ### Files Added/Modified:
+
 - `.github/workflows/deploy.yml` - GitHub Actions workflow
 - `public/.nojekyll` - Bypasses Jekyll processing
 - `next.config.ts` - Updated for static export
@@ -43,10 +48,12 @@
 ## Troubleshooting:
 
 1. **If deployment fails**:
+
    - Check the Actions tab in your GitHub repository for error logs
    - Ensure your main branch is named `master`
 
 2. **If images don't load**:
+
    - Make sure all images are in the `public` folder
    - Image paths should start with `/` (e.g., `/healthsync.png`)
 
