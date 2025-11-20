@@ -6,6 +6,7 @@ import { Mail, Lock, User, Eye, EyeOff, Building } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/Button";
+import { getAssetPath } from "@/lib/utils";
 import Input from "@/components/Input";
 import Select from "@/components/Select";
 import GlassCard from "@/components/GlassCard";
@@ -67,7 +68,7 @@ export default function SignupPage() {
         <div className="text-center">
           <Link href="/" className="inline-flex items-center space-x-2 mb-8">
             <Image
-              src="/healthsync.png"
+              src={getAssetPath("healthsync.png")}
               alt="HealthSync"
               width={40}
               height={40}

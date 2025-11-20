@@ -55,7 +55,8 @@
 2. **If images don't load**:
 
    - Make sure all images are in the `public` folder
-   - Image paths should start with `/` (e.g., `/healthsync.png`)
+   - Use the `getAssetPath()` utility function for all image references
+   - The utility automatically handles development vs production paths
 
 3. **If styling looks broken**:
    - Clear your browser cache

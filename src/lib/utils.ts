@@ -58,3 +58,21 @@ export function getRiskBgColor(riskScore: string): string {
       return "bg-gray-100 text-gray-800 dark:bg-gray-900/20 dark:text-gray-400";
   }
 }
+
+/**
+ * Utility function to get the correct asset path for different environments
+ * In development: returns the original path
+ * In production (GitHub Pages): prepends the base path
+ */
+export function getAssetPath(path: string): string {
+  // Remove leading slash if present
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  
+  // In production, use the base path
+  if (process.env.NODE_ENV === 'production') {
+    return `/healthsync/${cleanPath}`;
+  }
+  
+  // In development, use the original path
+  return `/${cleanPath}`;
+}

@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import Button from "@/components/Button";
 import GlassCard from "@/components/GlassCard";
+import { getAssetPath } from "@/lib/utils";
 
 export default function AboutPage() {
   const stats = [
@@ -56,25 +57,25 @@ export default function AboutPage() {
       name: "Dr. Manusha Sathsara",
       role: "CEO & Co-Founder",
       background: "Former Chief Medical Officer at Asiri Hospital",
-      image: "/Images/Manusha.png",
+      image: getAssetPath("Images/Manusha.png"),
     },
     {
       name: "Piyara Wathsiluni",
       role: "CTO & Co-Founder",
       background: "Ex-Google AI Research, Stanford PhD",
-      image: "/Images/Wathsiluni.jpg",
+      image: getAssetPath("Images/Wathsiluni.jpg"),
     },
     {
       name: "Dr. Dinithi Ayesha",
       role: "Chief Medical Officer",
       background: "Cardiologist, 5+ years clinical experience",
-      image: "/Images/Dinithi.jpg",
+      image: getAssetPath("Images/Dinithi.jpg"),
     },
     {
       name: "Praneepa Tharushini",
       role: "VP of Product",
       background: "Former Product Lead at Kandy Pharmacy",
-      image: "/Images/Praneepa.jpg",
+      image: getAssetPath("Images/Praneepa.jpg"),
     },
   ];
 

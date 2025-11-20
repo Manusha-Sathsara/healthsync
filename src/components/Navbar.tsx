@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 import {
   Menu,
   X,
@@ -77,7 +78,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/healthsync.png"
+              src={getAssetPath("healthsync.png")}
               alt="HealthSync"
               width={32}
               height={32}

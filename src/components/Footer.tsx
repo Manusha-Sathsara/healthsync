@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 import {
   Heart,
   Mail,
@@ -21,7 +22,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/healthsync.png"
+                src={getAssetPath("healthsync.png")}
                 alt="HealthSync"
                 width={32}
                 height={32}
