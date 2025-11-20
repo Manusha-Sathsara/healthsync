@@ -54,42 +54,42 @@ export interface ChatMessage {
 export const mockPatients: Patient[] = [
   {
     id: "1",
-    name: "Sarah Johnson",
-    age: 67,
+    name: " Sadani Rajapaksha",
+    age: 55,
     riskScore: "high",
-    lastVisit: "2024-11-10",
+    lastVisit: "2025-11-15",
     conditions: ["Diabetes Type 2", "Hypertension", "High Cholesterol"],
   },
   {
     id: "2",
-    name: "Michael Chen",
-    age: 45,
+    name: "Kaveesh Wickramasinghe",
+    age: 48,
     riskScore: "medium",
-    lastVisit: "2024-11-12",
+    lastVisit: "2025-11-15",
     conditions: ["Pre-diabetes", "Sleep Apnea"],
   },
   {
     id: "3",
-    name: "Emma Davis",
-    age: 34,
+    name: "Deshan Silva",
+    age: 29,
     riskScore: "low",
-    lastVisit: "2024-11-08",
+    lastVisit: "2025-11-09",
     conditions: ["Seasonal Allergies"],
   },
   {
     id: "4",
-    name: "Robert Wilson",
-    age: 72,
+    name: "Nimal fernando",
+    age: 77,
     riskScore: "critical",
-    lastVisit: "2024-11-13",
+    lastVisit: "2025-11-07",
     conditions: ["Heart Disease", "COPD", "Diabetes Type 2"],
   },
   {
     id: "5",
-    name: "Lisa Anderson",
-    age: 52,
+    name: "Neha Wijesinghe",
+    age: 56,
     riskScore: "medium",
-    lastVisit: "2024-11-09",
+    lastVisit: "2025-11-06",
     conditions: ["Hypertension", "Anxiety"],
   },
 ];
@@ -97,7 +97,7 @@ export const mockPatients: Patient[] = [
 // Mock vital readings
 export const mockVitals: VitalReading[] = [
   {
-    timestamp: "2024-11-15T08:00:00Z",
+    timestamp: "2025-11-15T08:00:00Z",
     glucose: 142,
     bloodPressure: { systolic: 135, diastolic: 85 },
     heartRate: 78,
@@ -105,7 +105,7 @@ export const mockVitals: VitalReading[] = [
     temperature: 98.6,
   },
   {
-    timestamp: "2024-11-14T08:00:00Z",
+    timestamp: "2025-11-15T08:00:00Z",
     glucose: 138,
     bloodPressure: { systolic: 132, diastolic: 82 },
     heartRate: 76,
@@ -113,7 +113,7 @@ export const mockVitals: VitalReading[] = [
     temperature: 98.4,
   },
   {
-    timestamp: "2024-11-13T08:00:00Z",
+    timestamp: "2025-11-09T08:00:00Z",
     glucose: 145,
     bloodPressure: { systolic: 138, diastolic: 88 },
     heartRate: 80,
@@ -129,7 +129,7 @@ export const mockMedications: Medication[] = [
     name: "Metformin",
     dosage: "500mg",
     frequency: "Twice daily",
-    nextDue: "2024-11-15T18:00:00Z",
+    nextDue: "2025-11-18T18:00:00Z",
     refillsLeft: 3,
   },
   {
@@ -137,7 +137,7 @@ export const mockMedications: Medication[] = [
     name: "Lisinopril",
     dosage: "10mg",
     frequency: "Once daily",
-    nextDue: "2024-11-16T09:00:00Z",
+    nextDue: "2025-11-17T09:00:00Z",
     refillsLeft: 2,
   },
   {
@@ -145,7 +145,7 @@ export const mockMedications: Medication[] = [
     name: "Atorvastatin",
     dosage: "20mg",
     frequency: "Once daily",
-    nextDue: "2024-11-15T21:00:00Z",
+    nextDue: "2025-11-14T21:00:00Z",
     refillsLeft: 1,
   },
 ];
@@ -153,49 +153,49 @@ export const mockMedications: Medication[] = [
 // Mock activity data
 export const mockActivity: ActivitySummary[] = [
   {
-    date: "2024-11-15",
+    date: "2025-11-15",
     steps: 8500,
     sleep: 7.5,
     calories: 2100,
     activeMinutes: 45,
   },
   {
-    date: "2024-11-14",
+    date: "2025-11-14",
     steps: 9200,
     sleep: 8.2,
     calories: 2250,
     activeMinutes: 52,
   },
   {
-    date: "2024-11-13",
+    date: "2025-11-13",
     steps: 7800,
     sleep: 6.8,
     calories: 2050,
     activeMinutes: 38,
   },
   {
-    date: "2024-11-12",
+    date: "2025-11-12",
     steps: 10500,
     sleep: 7.9,
     calories: 2350,
     activeMinutes: 68,
   },
   {
-    date: "2024-11-11",
+    date: "2025-11-11",
     steps: 6200,
     sleep: 7.1,
     calories: 1950,
     activeMinutes: 32,
   },
   {
-    date: "2024-11-10",
+    date: "2025-11-10",
     steps: 8900,
     sleep: 8.0,
     calories: 2180,
     activeMinutes: 48,
   },
   {
-    date: "2024-11-09",
+    date: "2025-11-09",
     steps: 9600,
     sleep: 7.4,
     calories: 2220,
@@ -206,7 +206,12 @@ export const mockActivity: ActivitySummary[] = [
 // Mock insurance metrics
 export const mockInsuranceMetrics: InsuranceMetric[] = [
   { label: "Total Members", value: "125,847", change: 2.4, trend: "up" },
-  { label: "Claims This Month", value: "$2.4M", change: -1.2, trend: "down" },
+  {
+    label: "Claims This Month",
+    value: "LKR 2.4M",
+    change: -1.2,
+    trend: "down",
+  },
   { label: "Risk Score Average", value: "3.2", change: 0.1, trend: "up" },
   { label: "Prevention Rate", value: "84%", change: 3.8, trend: "up" },
   { label: "Cost Per Member", value: "$342", change: -2.1, trend: "down" },
@@ -219,21 +224,21 @@ export const mockChatMessages: ChatMessage[] = [
     id: "1",
     message: "Hello! I'm your AI Health Coach. How can I help you today?",
     sender: "ai",
-    timestamp: "2024-11-15T10:00:00Z",
+    timestamp: "2025-11-15T10:00:00Z",
   },
   {
     id: "2",
     message:
       "I've been feeling a bit tired lately. What could be causing this?",
     sender: "user",
-    timestamp: "2024-11-15T10:01:00Z",
+    timestamp: "2025-11-15T10:01:00Z",
   },
   {
     id: "3",
     message:
       "There are several factors that could contribute to fatigue. Based on your recent vitals, I notice your glucose levels have been slightly elevated. Let's explore some potential causes and solutions.",
     sender: "ai",
-    timestamp: "2024-11-15T10:01:30Z",
+    timestamp: "2025-11-15T10:01:30Z",
   },
 ];
 
@@ -241,8 +246,8 @@ export const mockChatMessages: ChatMessage[] = [
 export const mockTestimonials = [
   {
     id: "1",
-    name: "Dr. Sarah Mitchell",
-    role: "Cardiologist, City Medical Center",
+    name: "Dr. Sudarshi Navaratne",
+    role: "Cardiologist, Kandy teaching Hospital",
     content:
       "HealthSync has revolutionized how I monitor my patients. The real-time alerts have helped prevent several cardiac events.",
     rating: 5,
@@ -250,7 +255,7 @@ export const mockTestimonials = [
   },
   {
     id: "2",
-    name: "Maria Rodriguez",
+    name: "Piyumi Senanayake",
     role: "Patient",
     content:
       "Managing my diabetes has never been easier. The AI coach provides personalized insights that actually work.",
@@ -259,8 +264,8 @@ export const mockTestimonials = [
   },
   {
     id: "3",
-    name: "David Park",
-    role: "Insurance Director, HealthFirst",
+    name: "Kalum Priyanga",
+    role: "Insurance Director, AIA Insurance",
     content:
       "The predictive analytics have reduced our claim costs by 23% while improving patient outcomes.",
     rating: 5,
@@ -441,7 +446,7 @@ export const mockSystemHealth = [
 
 export const mockRecentActivities = [
   {
-    description: "New provider Dr. Sarah Wilson registered",
+    description: "New provider Dr. Ruwangi Wijerathne registered",
     timestamp: "2 minutes ago",
   },
   {
@@ -461,43 +466,43 @@ export const mockRecentActivities = [
     timestamp: "4 hours ago",
   },
   {
-    description: "New patient John Smith registered",
+    description: "New patient Saman Bandara registered",
     timestamp: "6 hours ago",
   },
 ];
 
 export const mockUserManagement = [
   {
-    name: "John Smith",
-    email: "john.smith@email.com",
+    name: "Saman Bandara",
+    email: "Samanbandara123@email.com",
     role: "Patient",
     status: "Active",
     lastLogin: "2 hours ago",
   },
   {
-    name: "Dr. Sarah Wilson",
-    email: "sarah.wilson@hospital.com",
+    name: "Dr. Ruwangi Wijerathne",
+    email: "RuwangiWijerathne@hospital.com",
     role: "Provider",
     status: "Active",
     lastLogin: "30 minutes ago",
   },
   {
-    name: "Michael Johnson",
-    email: "michael.j@insurance.com",
+    name: "Kalum Priyanga",
+    email: "Kalum.p@insurance.com",
     role: "Insurance",
     status: "Active",
     lastLogin: "1 day ago",
   },
   {
-    name: "Emily Davis",
-    email: "emily.davis@email.com",
+    name: "Santhi Perera ",
+    email: "santhiperera12@email.com",
     role: "Patient",
     status: "Inactive",
     lastLogin: "1 week ago",
   },
   {
-    name: "Dr. Robert Brown",
-    email: "robert.brown@clinic.com",
+    name: "Dr. Sunil Batagoda",
+    email: "Sunilbatagoda@clinic.com",
     role: "Provider",
     status: "Pending",
     lastLogin: "Never",
@@ -506,27 +511,27 @@ export const mockUserManagement = [
 
 export const mockProviderApplications = [
   {
-    name: "Dr. Jennifer Lee",
+    name: "Dr. Gayani Pathmathilake",
     specialty: "Cardiology",
-    location: "New York Medical Center",
+    location: "Colombo general hospital",
     status: "Pending",
   },
   {
-    name: "Dr. Michael Chen",
+    name: "Dr. Anoma Thilakaratne",
     specialty: "Dermatology",
-    location: "San Francisco Clinic",
+    location: "Asiri hospital, Kandy",
     status: "Approved",
   },
   {
-    name: "Dr. Amanda Rodriguez",
+    name: "Dr. Amanda Ranasinghe",
     specialty: "Pediatrics",
-    location: "Children's Hospital",
+    location: "Apeksha hospital, Maharagama",
     status: "Pending",
   },
   {
-    name: "Dr. David Thompson",
+    name: "Dr. Thushantha Jayawardena",
     specialty: "Orthopedics",
-    location: "Sports Medicine Center",
+    location: "Sports Medicine Center, Malabe",
     status: "Rejected",
   },
 ];
