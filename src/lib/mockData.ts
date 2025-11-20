@@ -391,28 +391,28 @@ export const mockAdminStats = [
     value: "12,543",
     change: 12.5,
     icon: "Users",
-    color: "blue",
+    color: "primary",
   },
   {
     title: "Active Providers",
     value: "1,247",
     change: 8.2,
     icon: "UserCheck",
-    color: "green",
+    color: "success",
   },
   {
     title: "System Uptime",
     value: "99.9%",
     change: 0.1,
     icon: "Server",
-    color: "purple",
+    color: "accent",
   },
   {
     title: "Monthly Revenue",
     value: "$2.4M",
     change: 15.3,
     icon: "TrendingUp",
-    color: "orange",
+    color: "warning",
   },
 ];
 
