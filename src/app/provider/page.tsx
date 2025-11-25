@@ -41,7 +41,7 @@ const Sidebar = ({
         <Stethoscope className="w-5 h-5 text-white" />
       </div>
       <div>
-        <h3 className="font-semibold">Dr. Sarah Mitchell</h3>
+        <h3 className="font-semibold">Dr. Dinithi Ayesha</h3>
         <p className="text-sm text-muted-foreground">Cardiologist</p>
       </div>
     </div>
@@ -314,7 +314,7 @@ export default function ProviderDashboard() {
                   <select
                     value={filterRisk}
                     onChange={(e) => setFilterRisk(e.target.value)}
-                    className="px-3 py-2 bg-input border border-border rounded-lg text-sm"
+                    className="px-3 py-2 bg-white dark:bg-gray-800 border border-border rounded-lg text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary-500"
                   >
                     <option value="all">All Risk Levels</option>
                     <option value="low">Low Risk</option>
@@ -417,22 +417,22 @@ export default function ProviderDashboard() {
                 <div className="space-y-4">
                   {[
                     {
-                      patient: "Robert Wilson",
+                      patient: "Sadani Gayasha",
                       alert: "Irregular heart rhythm detected",
                       severity: "high",
-                      time: "5 min ago",
+                      time: "10 min ago",
                     },
                     {
-                      patient: "Sarah Johnson",
+                      patient: "Kaveesha Wickramasinghe",
                       alert: "Blood glucose spike",
                       severity: "medium",
-                      time: "12 min ago",
+                      time: "15 min ago",
                     },
                     {
-                      patient: "Michael Chen",
+                      patient: "Deshan Silva",
                       alert: "Missed medication reminder",
                       severity: "low",
-                      time: "1 hour ago",
+                      time: "2 hour ago",
                     },
                   ].map((alert, index) => (
                     <div

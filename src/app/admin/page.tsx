@@ -264,7 +264,7 @@ export default function AdminDashboard() {
                     <input
                       type="text"
                       placeholder="Search users..."
-                      className="w-full pl-10 pr-4 py-2 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-foreground"
+                      className="w-full pl-10 pr-4 py-2 bg-white dark:bg-gray-800 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-foreground"
                     />
                   </div>
 
@@ -650,7 +650,7 @@ export default function AdminDashboard() {
                           <input
                             type="text"
                             value="HealthSync"
-                            className="px-3 py-1 bg-input border border-border rounded text-sm"
+                            className="px-3 py-1 bg-white dark:bg-gray-800 border border-border rounded text-sm text-foreground"
                           />
                         </div>
                         <div className="flex items-center justify-between">
@@ -684,7 +684,7 @@ export default function AdminDashboard() {
                           <input
                             type="number"
                             value="30"
-                            className="px-3 py-1 bg-input border border-border rounded text-sm w-20"
+                            className="px-3 py-1 bg-white dark:bg-gray-800 border border-border rounded text-sm w-20 text-foreground"
                           />
                         </div>
                       </div>
